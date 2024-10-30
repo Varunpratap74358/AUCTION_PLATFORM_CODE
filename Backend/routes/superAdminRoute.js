@@ -4,7 +4,7 @@ import { deleteAuctionItem, deletePaymentProof, fetchAllUsers, getPaymentProofDe
 
 export const routes = express.Router()
 
-routes.delete("/auctionitem/delete/:id",isAuthenticated,deleteAuctionItem)
+routes.delete("/auctionitem/delete/:id",isAuthenticated,isAuthorized("Super Admin"),deleteAuctionItem)
 routes.get("/paymentproofs/getall",isAuthenticated,isAuthorized("Super Admin"),getPaymentProofs)
 routes.get("/paymentproof/:id",isAuthenticated,isAuthorized("Super Admin"),getPaymentProofDetail)
 routes.put("/paymentproof/status/update/:id",isAuthenticated,isAuthorized("Super Admin"),updateProofStatus)
