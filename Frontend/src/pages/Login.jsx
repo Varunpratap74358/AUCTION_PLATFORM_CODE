@@ -59,7 +59,7 @@ const Login = () => {
                 className="text-[16px] py-2 bg-transparent border-b-[1px] border-stone-500 focus:outline-none"
               />
             </div>
-            <button className='bg-red-500 font-semibold hover:bg-red-600 transition-all duration-200 text-xl py-2 px-4 rounded-md text-white my-auto ' type='submit' disabled={loading}>{loading ?<RiLoader2Fill className='flex justify-center items-center mx-auto' /> : "Login"}</button>
+            <button className={`bg-red-500 font-semibold hover:bg-red-600 transition-all duration-600 text-xl py-2 px-4 rounded-md text-white my-auto `} type='submit' disabled={loading}>{loading ?<RiLoader2Fill className='flex justify-center items-center mx-auto animate-spin' /> : "Login"}</button>
           </form>
         </div>
       </section>
